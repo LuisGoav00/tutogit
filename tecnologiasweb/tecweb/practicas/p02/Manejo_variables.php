@@ -97,7 +97,25 @@ function mostrar() {
   unset($b);
   unset($c);
   unset($z);
-  
+
+  /*******************5*********************/
+echo "*******************5*********************<br><br>";
+$a = "7 personas";
+var_dump($a);
+echo "<br>";
+
+$b = (integer) $a;
+var_dump($b);
+echo "<br>";
+
+$a = "9E3";
+var_dump($a);
+echo "<br>";
+
+$c = (double) $a;
+var_dump($c);
+echo "<br><br>";
+
 ?>
 
 
