@@ -81,6 +81,23 @@ $z[0] = "MySQL";
 var_dump($z);
 echo "<br>";
 
+
+/*******************4*********************/
+echo "*******************4*********************<br><br>";
+function mostrar() {
+  echo 'variable $a: ' . $GLOBALS['a'] . "<br>";
+  echo 'variable $b: ' . $GLOBALS['b'] . "<br>";
+  echo 'variable $c: ' . $GLOBALS['c'] . "<br>";
+  echo 'variable $z: ' . $GLOBALS['z'] . "<br>";
+  
+}
+  mostrar();
+  echo "<br><br>";
+  unset($a);
+  unset($b);
+  unset($c);
+  unset($z);
+  
 ?>
 
 
