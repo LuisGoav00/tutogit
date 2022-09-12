@@ -116,6 +116,37 @@ $c = (double) $a;
 var_dump($c);
 echo "<br><br>";
 
+
+/*******************6*********************/
+echo "*******************6*********************<br><br>";
+$a = "0";
+var_dump($a);
+echo "<br>";
+
+$b = "TRUE";
+var_dump($b);
+echo "<br>";
+
+$c = FALSE;
+var_dump($c);
+echo "<br>";
+
+$d = ($a OR $b);
+var_dump($d);
+echo "<br>";
+
+$e = ($a AND $c);
+var_dump($e);
+echo "<br>";
+
+$f = ($a XOR $b);
+var_dump($f);
+echo "<br>";
+
+echo "Cambiando la variable c de false a true  <br>";
+$c = TRUE;
+var_dump($c);
+
 ?>
 
 
