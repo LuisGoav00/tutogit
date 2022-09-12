@@ -147,6 +147,16 @@ echo "Cambiando la variable c de false a true  <br>";
 $c = TRUE;
 var_dump($c);
 
+
+/*******************7*********************/
+echo "*******************7*********************<br><br>";
+echo $_SERVER['SERVER_SOFTWARE'];
+echo "<br>";
+echo $_SERVER['SERVER_NAME'];
+echo "<br>";
+echo $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+echo "<br>";
+
 ?>
 
 
