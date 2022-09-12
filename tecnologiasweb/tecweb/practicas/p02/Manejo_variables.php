@@ -51,6 +51,36 @@ unset($b);
 unset($a);
 
 
+/*******************3*********************/
+echo "*******************3*********************<br><br>";
+$a = "PHP5";
+echo $a;
+echo "<br>";
+
+$z[] = &$a;
+var_dump($z);
+echo "<br><br>";
+
+$b = "5a version de PHP";
+echo $b;
+echo "<br><br>";
+
+$c = $b*10;
+echo $c;
+echo "<br><br>";
+
+$a .= $a;
+echo $a;
+echo "<br>";
+
+$b *= $c;
+echo $b;
+echo "<br>";
+
+$z[0] = "MySQL";
+var_dump($z);
+echo "<br>";
+
 ?>
 
 
