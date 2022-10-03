@@ -12,9 +12,6 @@
     </style>
 </head>
 <body>
-    <?php
-    require_once __DIR__.'/src/funciones.php';
-    ?>
     <div>
         <h3>Ejercicio 1</h3>
         <p>Escribir programa para comprobar si un número es un múltiplo de 5 y 7.</p>
@@ -131,23 +128,6 @@
     </div>
     <div>
         <h3>Ejercicio 5</h3>
-        <p>Crear un arreglo cuyos <strong>índices</strong> van de 97 a 122 y cuyos <strong>valores</strong> son las letras de la 'a' a la 'z'. Usa la función <strong>chr(n)</strong> que devuelve el caracter cuyo código ASCII es <strong>n</strong> para poner el valor en cada índice. Es decir:</p>
-        <p>
-            [97] => a <br>
-            [98] => b <br>
-            [99] => c <br>
-            … <br>
-            [122] => z
-        </p>
-        <p>
-            R:
-            <?php
-            // AQUÍ VA EL CÓDIGO DE SOLUCIÓN
-            ?>
-        </p>
-    </div>
-    <div>
-        <h3>Ejercicio 6</h3>
         <p>
             Usar las variables <strong>$edad</strong> y <strong>$sexo</strong> en una instrucción if para identificar una persona de sexo "femenino", 
             cuya edad oscile entre los 18 y 35 años y mostrar un mensaje de bienvenida apropiado. Por ejemplo:
@@ -165,16 +145,56 @@
         </p>
         <p>
             R:
-            <form id="formulario1" action="./src/script1.php" method="post">
+            <form id="formulario1" action="./src/formulario1.php" method="post">
             <fieldset>
                 <legend>Información Personal</legend>
                 <ol>
                 <li><label>Edad:</label> <input type="text" name="edad"></li>
-                <li><label>Sexo:</label> <input type="text" name="sexo"></li>
+                <li><label>Sexo:</label> <select name="sexo">
+                    <option >Masculino</option>
+                    <option >Femenino</option>
+                </select><br></li>
                 </ol>
             </fieldset>
             <p>
                 <input type="submit" value="¡OK!">
+            </p>
+            </form>
+        </p>
+    </div>
+
+    <div>
+        <h3>Ejercicio 6</h3>
+        <p>
+        Crea en código duro un arreglo asociativo que sirva para registrar el parque vehicular de
+una ciudad.
+        </p>
+        <p>
+            R:
+            <form id="formulario2" action="./src/formulario2.php" method="post">
+            <fieldset>
+                <ol>
+                <li>Matricula: <select name="matricula">
+                    <option >UBN6338</option>
+                    <option >UBN6339</option>
+                    <option >FHI4681</option>
+                    <option >FHI4682</option>
+                    <option >AWO5102</option>
+                    <option >AWO5103</option>
+                    <option >POE25487</option>
+                    <option >MDK5689</option>
+                    <option >LFK6589</option>
+                    <option >KIE5569</option>
+                    <option >UJF3652</option>
+                    <option >RTD1548</option>
+                    <option >RWW3658</option>
+                    <option >FEI8755</option>
+                    <option >GEE5489</option>
+                </select><li><br>
+                </ol>
+            </fieldset>
+            <p>
+            <input type="submit" value = "Consultar">
             </p>
             </form>
         </p>

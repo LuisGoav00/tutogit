@@ -4,7 +4,19 @@
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
             <title>Formulario Autos</title>
             </head>
+            <style type="text/css">
+                body {margin: 20px; 
+                background-color: #C4DF9B;
+                font-family: Verdana, Helvetica, sans-serif;
+                font-size: 90%;}
+                h1 {color: #005825;
+                border-bottom: 1px solid #005825;}
+                h2 {font-size: 1.2em;
+                color: #4A0048;}
+            </style>
         <body>
+        <h1>RESPUESTA</h1>
+
             <?php
             $matricula = $_POST["matricula"];
         //tipos (sedan|hachback|camioneta)
