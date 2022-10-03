@@ -21,11 +21,14 @@
         <p>
             R:
             <?php
-            if (!empty($_GET['numero'])) {
-                $numero = $_GET['numero'];
-                echo multiplo5y7($numero);
-            } else {
-                echo '(vacío)';
+            $n1 = $_GET["numero"];
+            if(( $n1 % 7 )  == 0 && ( $n1 % 5 ) == 0){
+            
+                echo $n1 . ' es multiplo de 5 y 7';
+                
+            }else{
+            
+                echo $n1 . ' no es multiplo de 5 y 7';
             }
             ?>
         </p>
