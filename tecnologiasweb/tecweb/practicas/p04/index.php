@@ -80,7 +80,7 @@
         <p>
             R:
             <?php
-            // AQUÍ VA EL CÓDIGO DE SOLUCIÓN
+            // AQUÍ VA EL CÓDIGO DE SOLUCIÓN 3
                 $num = $_GET["numero2"];
                 echo "El numero ingresado es $num <br>";
 
