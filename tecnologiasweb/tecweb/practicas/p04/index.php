@@ -81,6 +81,24 @@
             R:
             <?php
             // AQUÍ VA EL CÓDIGO DE SOLUCIÓN
+                $num = $_GET["numero2"];
+                echo "El numero ingresado es $num <br>";
+
+                echo "Buscando el primer numero aleatorio que sea multiplo de $num<br>";
+
+                while(is_int($i=rand(10,100)) && $i % $num != 0){
+                echo "Numero aleatorio: $i <br>";
+                }
+                echo "<br>Primer numero mulriplo de $num: $i";
+                ?>
+                <br>
+                <p>Variante usando do while</p>
+                <?php
+                do{
+                    $j = rand(10,100);
+                    echo "Numero aleatorio: $j<br>";
+                }while(is_int($j) && $j % $num != 0);
+                echo "<br>Primer numero mulriplo de $num: $j";
             ?>
         </p>
     </div>
