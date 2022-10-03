@@ -117,6 +117,15 @@
             R:
             <?php
             // AQUÍ VA EL CÓDIGO DE SOLUCIÓN
+                for(is_int($i = 97); $i <= 122; $i++)
+                {
+                    $letras = array($i,chr($i));
+                    foreach($letras as $numero => $letra)
+                    {
+                        echo "[$letra]  ";
+                    }
+                    echo "<br>";
+                }
             ?>
         </p>
     </div>
