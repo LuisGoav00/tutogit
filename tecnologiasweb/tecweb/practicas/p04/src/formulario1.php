@@ -3,8 +3,20 @@
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
             <title>Formulario</title>
+            <style type="text/css">
+                body {margin: 20px; 
+                background-color: #C4DF9B;
+                font-family: Verdana, Helvetica, sans-serif;
+                font-size: 90%;}
+                h1 {color: #005825;
+                border-bottom: 1px solid #005825;}
+                h2 {font-size: 1.2em;
+                color: #4A0048;}
+            </style>
             </head>
         <body>
+        <h1>RESPUESTA</h1>
+        <br><br>
           <?php
           $edad = $_POST["edad"];
           $sexo = $_POST["sexo"];
