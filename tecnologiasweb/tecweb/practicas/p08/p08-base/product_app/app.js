@@ -5,9 +5,17 @@ var baseJSON = {
     "modelo": "XX-000",
     "marca": "NA",
     "detalles": "NA",
-    "imagen": "img/default.png"
+    "imagen": "img/imagen.png"
   };
 
+    function checarnombre(nombre) {
+    if (nombre.value == ''){
+        alert('Introduce un nombre');
+    }
+    else if (nombre.lenght >= 100) {
+        alert('Introduce un nombre menor o igual a 100 caracteres');
+    }
+    }
 // FUNCIÓN CALLBACK DE BOTÓN "Buscar"
 function buscarID(e) {
     /**
@@ -31,23 +39,25 @@ function buscarID(e) {
             
             // SE OBTIENE EL OBJETO DE DATOS A PARTIR DE UN STRING JSON
             let productos = JSON.parse(client.responseText);    // similar a eval('('+client.responseText+')');
-            
+            let template = '';
+           // let descripcion = '';
+            for(var i=0; i<productos.length; i++ ){
             // SE VERIFICA SI EL OBJETO JSON TIENE DATOS
-            if(Object.keys(productos).length > 0) {
+           // if(Object.keys(productos).length > 0) {
                 // SE CREA UNA LISTA HTML CON LA DESCRIPCIÓN DEL PRODUCTO
                 let descripcion = '';
-                    descripcion += '<li>precio: '+productos.precio+'</li>';
-                    descripcion += '<li>unidades: '+productos.unidades+'</li>';
-                    descripcion += '<li>modelo: '+productos.modelo+'</li>';
-                    descripcion += '<li>marca: '+productos.marca+'</li>';
-                    descripcion += '<li>detalles: '+productos.detalles+'</li>';
+                    descripcion += '<li>precio: '+productos[i].precio+'</li>';
+                    descripcion += '<li>unidades: '+productos[i].unidades+'</li>';
+                    descripcion += '<li>modelo: '+productos[i].modelo+'</li>';
+                    descripcion += '<li>marca: '+productos[i].marca+'</li>';
+                    descripcion += '<li>detalles: '+productos[i].detalles+'</li>';
                 
                 // SE CREA UNA PLANTILLA PARA CREAR LA(S) FILA(S) A INSERTAR EN EL DOCUMENTO HTML
-                let template = '';
+                //let template = '';
                     template += `
                         <tr>
-                            <td>${productos.id}</td>
-                            <td>${productos.nombre}</td>
+                            <td>${productos[i].id}</td>
+                            <td>${productos[i].nombre}</td>
                             <td><ul>${descripcion}</ul></td>
                         </tr>
                     `;
@@ -68,6 +78,32 @@ function agregarProducto(e) {
     var productoJsonString = document.getElementById('description').value;
     // SE CONVIERTE EL JSON DE STRING A OBJETO
     var finalJSON = JSON.parse(productoJsonString);
+    
+    if(finalJSON['precio'] < 99.99 ){
+        alert('Introduce un precio mayor a 99.99');
+    }
+    parseInt(finalJSON['unidades']);
+    if(finalJSON['unidades'] <= 0 ){
+        alert('Introduce un numero entero');
+    }
+    if(finalJSON['modelo'] == ''){
+        alert('Introduce un modelo');
+    }
+    if(finalJSON['marca'] == ''){
+        alert('Introduce una marca');
+    }
+    if(finalJSON['detalles'].length > 250){
+        alert('Ingresa detalles con menos de 250 caracteres');
+    }
+    if(finalJSON['imagen'] == ''){
+        finalJSON['imagen'] = 'img/imagen.png';
+    }
+    // else if (finalJSON['modelo'].lenght > 25) {
+    //     alert('El modelo debe tener menos de 25 caracteres');
+    // }
+
+
+
     // SE AGREGA AL JSON EL NOMBRE DEL PRODUCTO
     finalJSON['nombre'] = document.getElementById('name').value;
     // SE OBTIENE EL STRING DEL JSON FINAL
@@ -81,6 +117,7 @@ function agregarProducto(e) {
         // SE VERIFICA SI LA RESPUESTA ESTÁ LISTA Y FUE SATISFACTORIA
         if (client.readyState == 4 && client.status == 200) {
             console.log(client.responseText);
+            window.alert(client.responseText);
         }
     };
     client.send(productoJsonString);
